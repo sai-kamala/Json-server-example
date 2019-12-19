@@ -9,8 +9,10 @@ import {StudentDetailsService} from './student-details.service';
 export class AppComponent {
   title = 'student-details';
   tableData:any;
+  constructor(private service: StudentDetailsService){}
   ngOnInit(){
-    this.tableData.getData.subscribe()
-
-  }
+    this.service.getData().subscribe(data => {
+    this.tableData= data;
+    });
+ }
 }

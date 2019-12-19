@@ -9,6 +9,6 @@ export class StudentDetailsService {
 
   constructor(private http:HttpClient) { }
   getData():Observable<any>{
-    return this.http.get("http://localhost:3000/response")
+    return this.http.get("http://localhost:3000/response");
   }
 }
