@@ -1,0 +1,8 @@
+<div>
+  <h3>Student list</h3>
+  <ul>
+    <li *ngFor= "let data of tableData">
+      <span><a [routerLink] = "['/StudentInfo',data.id]">{{data.name}}</a></span>
+    </li>
+  </ul>
+</div>

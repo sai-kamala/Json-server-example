@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import{HttpClient} from '@angular/common/http';
+import{ HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 
 @Injectable({
@@ -8,7 +8,10 @@ import { Observable } from 'rxjs';
 export class StudentDetailsService {
 
   constructor(private http:HttpClient) { }
-  getData():Observable<any>{
+  getStudentList():Observable<any>{
     return this.http.get("http://localhost:3000/response");
+  }
+  getStudentInfo(routeID:any):Observable<any>{
+    return this.http.get("http://localhost:3000/employeeDetails/"+routeID);
   }
 }
