@@ -1,8 +1,23 @@
 <div>
   <h3>Student list</h3>
+  <h5>click on any one of the students to know their details</h5>
   <ul>
-    <li *ngFor= "let data of tableData">
-      <span><a [routerLink] = "['/StudentInfo',data.id]">{{data.name}}</a></span>
+    <li *ngFor="let data of studentList">
+      <span><a [routerLink]="['/StudentInfo',data.id]">{{data.name}}</a></span>
     </li>
   </ul>
+  <h5>select some students for training program</h5>
+  <div class="filter">
+    <input class="name-field" type="text" [(ngModel)] = "enteredName" placeholder="enter student name" name="txt1" (focus)="listShow=true" (keyup)="filterData()">
+    <div [ngClass]= "{
+      'displayBtn': displayButtons == true,
+      'hideBtn': displayButtons == false
+    }">
+      <span><button name="clr-btn" (click)="clearInput()">clear</button></span>
+      <span><button name="add-btn"  (click)="displayList()">Add</button></span>
+    </div>
+    <ul *ngIf="listShow" class="name-list">
+      <li *ngFor="let name of totalNames"><a (click) = "appendName($event)" href="#">{{name}}</a></li>
+    </ul>
+  </div>
 </div>

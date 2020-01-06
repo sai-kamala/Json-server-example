@@ -1,0 +1,18 @@
+.filter{
+margin-left: 35px;
+position: relative;
+}
+.name-list{
+    position: absolute;
+    top: 15px;
+    left: 0;
+    padding: 0;
+    list-style: none;
+    text-align: left;
+}
+.displayBtn{
+    display: inline-block;
+}
+.hideBtn{
+    display: none;
+}
