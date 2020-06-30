@@ -1,0 +1,13 @@
+table{
+    border: solid 2px black;
+}
+tr td, tr th{
+    border-bottom: solid 2px black;
+    border-right: solid 2px black;
+}
+tr td:last-child, tr th:last-child{
+    border-right: none;
+}
+tr:last-child td{  
+    border-bottom: none;
+}

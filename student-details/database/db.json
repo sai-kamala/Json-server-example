@@ -10,5 +10,21 @@
         {"id":"2","name":"kamala","Details": "UI developer", "hireDate":"24-6-2016"},
         {"id":"3","name":"purna","Details": "UI developer", "hireDate":"27-6-2016"},
         {"id":"4","name":"sai","Details": "UI developer", "hireDate":"28-6-2016"}
+    ],
+    "eligibility":[
+        {"id":"1","name":"sateesh","eligible": "Y","active":"true"},
+        {"id":"2","name":"kamala","eligible": "Y","active":"true"},
+        {"id":"3","name":"purna","eligible": "N","active":"false"},
+        {"id":"4","name":"sai","eligible": "N","active":"true"},
+        {"id":"5","name":"srikanth","eligible": "Y","active":"false"},
+        {"id":"6","name":"priya","eligible": "N","active":"true"},
+        {"id":"7","name":"Gayatri","eligible": "Y","active":"false"},
+        {"id":"8","name":"Niranjan","eligible": "N","active":"true"}
+    ],
+    "users":[
+        {"name":"saikamala","password":"saikamala@6"},
+        {"name":"kamala","password":"kamala@6"},
+        {"name":"sai","password":"saisai@6"},
+        {"name":"saikamala6","password":"saikamala6@6"}
     ]
 }

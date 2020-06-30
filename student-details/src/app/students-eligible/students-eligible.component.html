@@ -1,0 +1,18 @@
+<div>
+  <input type="radio" name="rd" value="active"(change)="showActiveList($event)">Active
+  <input type="radio" name="rd" value="inactive" (change)="showInActiveList($event)">In-Active
+  <table>
+    <tr>
+      <th><input type="checkbox" [(ngModel)]= "selectAll" (change)= "checkUncheckAll($event)"></th>
+      <th *ngFor = "let header of tableHeaders">{{header}}</th>
+    </tr>
+    <tr  *ngFor = "let row of displayList">
+      <td><input type="checkbox" [(ngModel)]= "row.select" (change)= "checkUncheck($event,row)"></td>
+      <td *ngFor = "let column of tableRows">
+        <span *ngIf = "column != 'eligible'">{{row[column]}}</span>
+        <span *ngIf= "row[column] == 'Y'">student has eligibility</span>
+        <span *ngIf= "row[column] == 'N'"><button>update</button></span>
+      </td>  
+    </tr>
+  </table>
+</div>

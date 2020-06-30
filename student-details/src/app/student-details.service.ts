@@ -15,6 +15,12 @@ export class StudentDetailsService {
     return this.http.get("http://localhost:3000/employeeDetails/"+routeID);
   }
   getStudentNames():Observable<any>{
-    return this.http.get("http://localhost:4000/studentNames");
+    return this.http.get("http://localhost:3000/employeeDetails");
+  }
+  getStudentEligibility():Observable<any>{
+    return this.http.get("http://localhost:3000/eligibility");
+  }
+  checkAuthUser():Observable<any>{
+    return this.http.get("http://localhost:3000/users");
   }
 }

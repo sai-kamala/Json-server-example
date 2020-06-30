@@ -1,0 +1,18 @@
+<div class="login-form">
+  <div class="form-container">
+    <form #form="ngForm" (ngSubmit)="submitted(form.value)">
+        <div class="form-group">
+          <label>Username:</label>
+          <input type="text" class="form-control" [(ngModel)] ="user.name" name="name" (focus)="focusFunction()">
+        </div>
+        <div class="form-group">
+          <label>Password:</label>
+          <input type="password" class="form-control" [(ngModel)] ="user.password" name="password" (focus)="focusFunction()">
+      </div>
+      <button type="submit">Submit</button>
+    </form>
+    <p class="error-msg" *ngIf="invalidUser">Invalid User</p>
+  </div>
+</div>
+<!-- <router-outlet></router-outlet> -->
+<!-- <app-student-information></app-student-information> -->
